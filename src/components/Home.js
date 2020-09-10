@@ -3,9 +3,21 @@ import React, {Component} from 'react';
 
 class Home extends Component{
 
+    // trigger() {
+    //     let newTime = Date.now() - this.props.date;
+    //     setInterval(() => { 
+    //         this.setState({
+    //             clock: newTime,
+    //         })
+    //     }, 1000);
+    // }
     state={
         curTime : new Date().toLocaleString(),
+        
     }
+ 
+  
+
     render(){
 
     return (
@@ -177,6 +189,8 @@ class Home extends Component{
                 <div class="flex xl:px-8 mb-6 ">
                     <p class="w-2/4">WELCOME BACK, <span class="italic">User A</span></p>
                     <p class="w-2/4 ">TODAY: {this.state.curTime}</p>
+                    {/* https://stackoverflow.com/questions/50890080/how-to-set-setinterval-in-reactjs
+                     */}
                 </div> 
 
                 {/* Add Button */}
