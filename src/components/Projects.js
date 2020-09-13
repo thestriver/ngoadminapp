@@ -7,7 +7,8 @@ class Projects extends Component{
         curTime : new Date().toLocaleString(),
     }
     render(){
-
+        const updateUser = this.props.updateUser;
+        // const deleteUser = this.props.deleteUser;
     return (
         <div class="bg-gray-100 font-sans leading-normal tracking-normal mt-12">
 
@@ -167,7 +168,56 @@ class Projects extends Component{
                                     </thead>
 
                                     <tbody class="bg-white">
-                                    <tr>
+
+                                    {this.props.users.map((user, key) => {
+                                        return (
+                                        <tr className={`row ${user.updating ? "updating" : ""}`} >
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 h-10 w-10">
+                                                        <img class="h-10 w-10 rounded-full" src={"./images/pro.png"}  alt="table" />
+                                                    </div>
+
+                                                    <div class="ml-16">
+                                                        <div class="text-sm leading-5 font-medium text-gray-900">{user.projectName2}</div>
+                                                        <div class="text-sm leading-5 text-gray-500">{user.projectProgress}</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        
+
+                                            <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
+                                                    <button className="icon" onClick={() => updateUser(key)}>
+                                                        Edit
+                                                    </button>
+                                            </td>
+
+                                            {/* <td  key={user.projectName2} class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                <p class="text-gray-900 whitespace-no-wrap">{user.projectName2}</p>
+                                            </td>
+                                            <td key={user.projectLead2}  class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                <p class="text-gray-900 whitespace-no-wrap">{user.projectLead2}</p>
+                                            </td>
+                                            <td key={user.prog} class="px-5 py-5 border-b border-gray-200 bg-white text-sm ">
+                                                <p class="text-gray-900 whitespace-no-wrap"> {user.projectProgress}</p>
+                                            </td>
+                                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-1/6 max-w-xl">
+                                                <button className="icon" onClick={() => updateUser(key)}>
+                                                    Edit
+                                                </button>
+                                            </td>
+                                            <td  class="px-5 py-5 border-b border-gray-200  bg-white text-sm w-1/6">
+                                                <button className="icon" onClick={() => deleteUser(key)}>
+                                                    Delete
+                                                </button>
+                                            </td> */}
+                                            
+
+                                        </tr>
+                                        );
+                                    })}
+                                    {/* <tr>
                                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                                             <div class="flex items-center">
                                                 <div class="flex-shrink-0 h-10 w-10">
@@ -175,8 +225,8 @@ class Projects extends Component{
                                                 </div>
 
                                                 <div class="ml-16">
-                                                    <div class="text-sm leading-5 font-medium text-gray-900">Project C</div>
-                                                    <div class="text-sm leading-5 text-gray-500">Lorem Ipsum</div>
+                                                    <div class="text-sm leading-5 font-medium text-gray-900">{user.projectName2}</div>
+                                                    <div class="text-sm leading-5 text-gray-500">{user.projectProgress}</div>
                                                 </div>
                                             </div>
                                         </td>
@@ -184,9 +234,11 @@ class Projects extends Component{
                                         
 
                                         <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                            <a href="#" class="text-green-600 hover:text-indigo-900">Edit</a>
+                                                <button className="icon" onClick={() => updateUser(key)}>
+                                                    Edit
+                                                </button>
                                         </td>
-                                    </tr>
+                                    </tr> */}
                                   
                                
 
@@ -211,88 +263,7 @@ class Projects extends Component{
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                            <div class="flex items-center">
-                                                <div class="flex-shrink-0 h-10 w-10">
-                                                    <img class="h-10 w-10 rounded-full" src={"./images/pro.png"}  alt="table" />
-                                                </div>
-
-                                                <div class="ml-16">
-                                                    <div class="text-sm leading-5 font-medium text-gray-900">Project E</div>
-                                                    <div class="text-sm leading-5 text-gray-500">Lorem Ipsum</div>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                       
-
-                                        <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                            <a href="#" class="text-green-600 hover:text-indigo-900">Edit</a>
-                                        </td>
-                                    </tr>
                                     
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                            <div class="flex items-center">
-                                                <div class="flex-shrink-0 h-10 w-10">
-                                                    <img class="h-10 w-10 rounded-full" src={"./images/pro.png"}  alt="table" />
-                                                </div>
-
-                                                <div class="ml-16">
-                                                    <div class="text-sm leading-5 font-medium text-gray-900">Project F</div>
-                                                    <div class="text-sm leading-5 text-gray-500">Lorem Ipsum</div>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        
-
-                                        <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                            <a href="#" class="text-green-600 hover:text-indigo-900">Edit</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                            <div class="flex items-center">
-                                                <div class="flex-shrink-0 h-10 w-10">
-                                                    <img class="h-10 w-10 rounded-full" src={"./images/pro.png"}  alt="table" />
-                                                </div>
-
-                                                <div class="ml-16">
-                                                    <div class="text-sm leading-5 font-medium text-gray-900">Project A</div>
-                                                    <div class="text-sm leading-5 text-gray-500">Lorem Ipsum</div>
-                                                </div>
-                                            </div>
-                                        </td>
-
-
-                                        <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                            <a href="#" class="text-green-600 hover:text-indigo-900">Edit</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                            <div class="flex items-center">
-                                                <div class="flex-shrink-0 h-10 w-10">
-                                                    <img class="h-10 w-10 rounded-full" src={"./images/pro.png"}  alt="table" />
-                                                </div>
-
-                                                <div class="ml-16">
-                                                    <div class="text-sm leading-5 font-medium text-gray-900">Project B</div>
-                                                    <div class="text-sm leading-5 text-gray-500">Lorem Ipsum</div>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        
-
-                                        <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                            <a href="#" class="text-green-600 hover:text-indigo-900">Edit</a>
-                                        </td>
-                                    </tr>
 
                                     </tbody>
                                 </table>

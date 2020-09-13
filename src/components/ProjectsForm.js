@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Field from "./Field";
 
-class Proposals extends Component{
+class ProjectsForm extends Component{
 
     state={
         curTime : new Date().toLocaleString(),
@@ -9,7 +9,7 @@ class Proposals extends Component{
     render(){
         const formState = this.props.formState;
         const onChange = this.props.onChange;
-        const onSubmit = this.props.onSubmit;
+        const onSubmit2 = this.props.onSubmit;
 
     return (
         <div class="bg-gray-100 font-sans leading-normal tracking-normal mt-12">
@@ -132,7 +132,7 @@ class Proposals extends Component{
 
                 <div class="flex xl:px-8">
 
-                    <div class=" text-gray-900 text-2xl mr-40">PROPOSALS</div>
+                    <div class=" text-gray-900 text-2xl mr-40">PROJECTS</div>
 
                     <p class="w-2/4 ml-32">TODAY: {this.state.curTime}</p>
 
@@ -149,37 +149,37 @@ class Proposals extends Component{
                 {/* <!-- component --> */}
     <div class=" rounded px-8 pt-2 pb-8 flex flex-col my-2">
         <div class="-mx-3 md:flex mb-2">
-            <form className="form" onSubmit={onSubmit}>
+            <form className="form" onSubmit={onSubmit2}>
                 <fieldset>
                 
                 <div class="md:w-full px-3  mb-6 md:mb-6">    
                 <Field 
                     class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-10 px-4 focus:border-green-500"
-                    name="projectName"
+                    name="projectName2"
                     label="Project Name"
-                    value={formState.projectName}
+                    value={formState.projectName2}
                     onChange={onChange}
                 />
                 </div>
 
-                <div class="md:w-full px-3" />
+                {/* <div class="md:w-full px-3" />
                 
                 <div class="md:w-full px-3 md:mb-6">
                 <Field className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 focus:border-green-500"
-                    name="projectLead"
+                    name="projectLead2"
                     label="Project Lead"
-                    value={formState.projectLead}
+                    value={formState.projectLead2}
                     onChange={onChange}
                 />
-                </div>
+                </div> */}
 
                 
                 
                 <div class="w-full px-3 md:mb-6">
                 <Field className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 focus:border-green-500"
-                    name="description"
-                    label="DESCRIPTION (including Details, Estimated Budget and Milestones)"
-                    value={formState.description}
+                    name="projectProgress"
+                    label="Project Progress"
+                    value={formState.projectProgress}
                     onChange={onChange}
                 />
                 </div>
@@ -351,4 +351,4 @@ class Proposals extends Component{
 
 }
 
-export default Proposals;
+export default ProjectsForm;
