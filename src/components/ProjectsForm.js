@@ -9,7 +9,7 @@ class ProjectsForm extends Component{
     render(){
         const formState = this.props.formState;
         const onChange = this.props.onChange;
-        const onSubmit2 = this.props.onSubmit;
+        const onSubmit2 = this.props.onSubmit2;
 
     return (
         <div class="bg-gray-100 font-sans leading-normal tracking-normal mt-12">
@@ -161,19 +161,6 @@ class ProjectsForm extends Component{
                     onChange={onChange}
                 />
                 </div>
-
-                {/* <div class="md:w-full px-3" />
-                
-                <div class="md:w-full px-3 md:mb-6">
-                <Field className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 focus:border-green-500"
-                    name="projectLead2"
-                    label="Project Lead"
-                    value={formState.projectLead2}
-                    onChange={onChange}
-                />
-                </div> */}
-
-                
                 
                 <div class="w-full px-3 md:mb-6">
                 <Field className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 focus:border-green-500"

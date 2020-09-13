@@ -15,6 +15,10 @@ import ProposalForm from './components/ProposalForm';
 import ProposalTable from './components/ProposalTable';
 import ProposalsTable from './components/ProposalsTable';
 import ProjectsForm from "./components/ProjectsForm";
+import Header from './components/Header';
+import SubmitForm from './components/SubmitForm';
+import TodoList from './components/ToDoList';
+
 
 
 class App extends Component {
@@ -59,7 +63,9 @@ class App extends Component {
             "The Helpmates Youth Foundation has taken it as a point of duty to ensure that children of school age are rightfully in classrooms. Beyond that, we will see to it that each of such children is afforded a fair share of quality education.",
           updating: false
         }
-      ]
+      ],
+
+      tasks: ['Get more donors', 'Social Media Posts', 'Get more volunteers']
     
     
     };
@@ -291,8 +297,15 @@ deleteUser = (key) => {
 
 
 
-
-
+//To-Do List
+handleSubmit = task => {
+  this.setState({tasks: [...this.state.tasks, task]});
+}
+handleDelete = (index) => {
+  const newArr = [...this.state.tasks];
+  newArr.splice(index, 1);
+  this.setState({tasks: newArr});
+}
 
 
 
@@ -329,7 +342,7 @@ deleteUser = (key) => {
 
         {/* <Proposals /> */}
 
-        {/* <FormVolunteer
+        <FormVolunteer
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
           newIdnumber={this.state.idnumber}
@@ -339,12 +352,12 @@ deleteUser = (key) => {
           newAvailability={this.state.availability}
           newTeam={this.state.team}
         />  
-        < TableVolunteer items={this.state.items} /> */}
+        < TableVolunteer items={this.state.items} />
 
         {/* < AddDonor />
         < Donors /> */}
-
-        {/* <FormDonor
+        
+        <FormDonor
           handleFormSubmit2={this.handleFormSubmit2}
           handleInputChange2={this.handleInputChange2}
           newIdnumber={this.state.idnumber2}
@@ -355,7 +368,7 @@ deleteUser = (key) => {
           newProject={this.state.project}
         />  
 
-        < TableDonor items={this.state.items} /> */}
+        < TableDonor items={this.state.items} />
 
         {/* Proposals */}
         <Proposals
@@ -370,6 +383,11 @@ deleteUser = (key) => {
           deleteUser={this.deleteUser}
         />
 
+        {/* To-Do List */}
+        {/* <Header numTodos={this.state.tasks.length} /> */}
+        
+        <SubmitForm onFormSubmit={this.handleSubmit} />
+        <TodoList numTodos={this.state.tasks.length} tasks={this.state.tasks} onDelete={this.handleDelete} />
 
 
       </div>

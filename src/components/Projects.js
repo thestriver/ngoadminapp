@@ -179,8 +179,8 @@ class Projects extends Component{
                                                     </div>
 
                                                     <div class="ml-16">
-                                                        <div class="text-sm leading-5 font-medium text-gray-900">{user.projectName2}</div>
-                                                        <div class="text-sm leading-5 text-gray-500">{user.projectProgress}</div>
+                                                        <div  key={user.projectName2} class="text-sm leading-5 font-medium text-gray-900">{user.projectName2}</div>
+                                                        <div key={user.projectProgress} class="text-sm leading-5 text-gray-500">{user.projectProgress}</div>
                                                     </div>
                                                 </div>
                                             </td>
