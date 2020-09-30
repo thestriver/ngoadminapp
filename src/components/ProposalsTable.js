@@ -26,86 +26,13 @@ class ProposalsTable extends Component {
     {/* SideBar */}
     <div class="flex flex-col md:flex-row">
 
-        <div class="bg-gray-100 shadow-lg h-16 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48">
-
-                {/* <div class="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
-                    <a href="#">
-                        <span class="text-xl pl-2">
-                        
-                        </span>
-                    </a>
-                </div> */}
-
-            <div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
-                
-                <div class="mt-6 mb-4 text-center">
-                    <img class="ml-12 h-14 w-24 rounded-full" src={"/images/user.png"} alt="" />
-                    <p className="italic">USER A</p>
-                </div>
-                
-                <hr />
-
-                <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
-                    <li class="mr-3 flex-1">
-                        <a class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                            <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/apps-grid.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black md:text-black block md:inline-block">Home</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/briefcase-line.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black  md:text-black  block md:inline-block">Projects</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/queue.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black  md:text-black  block md:inline-block">Volunteers</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline ">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/heart-care.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black  md:text-black  block md:inline-block">Donors</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <hr />
-
-                
-                <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                            <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/edit-list.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black md:text-black block md:inline-block">Tasks</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/calendar.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black  md:text-black  block md:inline-block">Calendar</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/envelope-line.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black  md:text-black  block md:inline-block">Email</span>
-                        </a>
-                    </li>
-                   
-                </ul>
-
-                
-
-
-
-            </div>
-
-
-        </div>
-
         {/* Cards */}
         <div class="main-content flex-1 bg-gray-100 md:mt-2 md:pb-5">
             
             {/* Table */}
 
             
-            <div class="antialiased font-sans bg-gray-100">
+            <div class="antialiased font-sans bg-gray-100 xl:mb-64">
                 <div class="container mx-auto px-4 sm:px-8">
                     <div class="py-8">
                     {/* Filter */}
@@ -153,9 +80,9 @@ class ProposalsTable extends Component {
                             </div>
 
                             {/* Add Button */}
-                            <div class="block relative xl:ml-auto ">
+                            {/* <div class="block relative xl:ml-auto ">
                                 <input type="submit" value="Add New Volunteer" class="bg-green-500 text-white font-bold text-md rounded-md hover:bg-gray-700 p-3 " /> 
-                            </div> 
+                            </div>  */}
                         </div>
                     
 
@@ -231,7 +158,7 @@ class ProposalsTable extends Component {
 
                                 {/* Pagination */}
                                 <div
-                                    class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
+                                    class="px-5 py-10 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
                                     <span class="text-xs xs:text-sm text-gray-900">
                                         Showing 1 to 10 of 50 Entries
                                     </span>

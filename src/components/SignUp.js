@@ -22,12 +22,12 @@ function SignUp(){
                         <p class="text-center  text-green-500">Please fill in your details to get started.</p>
                 
                         <form class="flex flex-col pt-3 md:pt-8">
-                            <div class="flex flex-col pt-4">
+                            {/* <div class="flex flex-col pt-4">
                                 <input type="text" id="text" placeholder="First Name" class="shadow appearance-none border rounded w-full py-4 px-4 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
                             </div>
                             <div class="flex flex-col pt-4">
                                 <input type="text" id="text" placeholder="Last Name" class="shadow appearance-none border rounded w-full py-4 px-4  text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
-                            </div>
+                            </div> */}
 
                             <div class="flex flex-col pt-4">
                                 <input type="email" id="email" placeholder="Email Address" class="shadow appearance-none border rounded w-full py-4 px-4  text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />

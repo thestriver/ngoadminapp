@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 
 
 class Projects extends Component{
-
+    
     state={
         curTime : new Date().toLocaleString(),
     }
@@ -30,79 +30,6 @@ class Projects extends Component{
     {/* SideBar */}
     <div class="flex flex-col md:flex-row">
 
-        <div class="bg-gray-100 shadow-lg h-16 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48">
-
-                {/* <div class="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
-                    <a href="#">
-                        <span class="text-xl pl-2">
-                        
-                        </span>
-                    </a>
-                </div> */}
-
-            <div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
-                
-                <div class="mt-6 mb-4 text-center">
-                    <img class="ml-12 h-14 w-24 rounded-full" src={"/images/user.png"} alt="" />
-                    <p className="italic">USER A</p>
-                </div>
-                
-                <hr />
-
-                <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
-                    <li class="mr-3 flex-1">
-                        <a class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                            <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/apps-grid.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black md:text-black block md:inline-block">Home</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/briefcase-line.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black  md:text-black  block md:inline-block">Projects</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/queue.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black  md:text-black  block md:inline-block">Volunteers</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline ">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/heart-care.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black  md:text-black  block md:inline-block">Donors</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <hr />
-
-                
-                <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                            <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/edit-list.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black md:text-black block md:inline-block">Tasks</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/calendar.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black  md:text-black  block md:inline-block">Calendar</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/envelope-line.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black  md:text-black  block md:inline-block">Email</span>
-                        </a>
-                    </li>
-                   
-                </ul>
-
-                
-
-
-
-            </div>
-
-
-        </div>
-
         {/* Cards */}
         <div class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
             
@@ -115,7 +42,7 @@ class Projects extends Component{
 
                             
                         <div class="">
-                            <img class="h-40 w-full" src={"./images/banner.png"} alt="banner" />
+                            <img class="h-32 w-full" src={"./images/banner.png"} alt="banner" />
                         </div>
                             
 
@@ -130,14 +57,14 @@ class Projects extends Component{
 
                 <div class="flex xl:px-8">
 
-                    <div class=" relative text-gray-600 text-2xl mr-24">
+                    {/* <div class=" relative text-gray-600 text-2xl mr-24">
                         <input type="search" name="search" placeholder="Search" class="bg-white h-12 px-32 pr-10 rounded-full text-sm focus:outline-none" />
                         <button type="submit" class="absolute right-0 top-0 mt-3 mr-4" >
                         <img src={"./images/search-line.png"} class="h-6 w-6" alt="search" />
                         </button>
-                    </div>
+                    </div> */}
 
-                    <p class="w-2/4">TODAY: {this.state.curTime}</p>
+                    <p class="w-2/4 text-xl text-green-500 ">TODAY: {this.state.curTime}</p>
 
                     {/* Add Button */}
                     <div class=" w-2/4 text-right mb-4">
@@ -150,7 +77,7 @@ class Projects extends Component{
 
                 {/* 2 Grids */}
 
-                <div class="flex xl:px-8 mb-6 ">
+                <div class="flex xl:px-8 mb-2 ">
 
                     <div class="w-1/3">
 
@@ -250,8 +177,8 @@ class Projects extends Component{
                                                 </div>
 
                                                 <div class="ml-16">
-                                                    <div class="text-sm leading-5 font-medium text-gray-900">Project D</div>
-                                                    <div class="text-sm leading-5 text-gray-500">Lorem Ipsum</div>
+                                                    <div class="text-sm leading-5 font-medium text-gray-900">Education Summit</div>
+                                                    <div class="text-sm leading-5 text-gray-500">50%</div>
                                                 </div>
                                             </div>
                                         </td>
@@ -268,6 +195,15 @@ class Projects extends Component{
                                     </tbody>
                                 </table>
                             </div>
+                            
+                            {/* <div>
+                            <Calendar
+                                onChange={onChange}
+                                value={value}
+                            /> 
+                            </div> */}
+
+
                         </div>
                     </div>
 
@@ -305,7 +241,7 @@ class Projects extends Component{
     <h2 class="mt-4 font-bold text-xl text-green-500">REPORTS</h2>
 
     <p class="text-xs text-gray-500 text-center mt-3">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim molestiae nulla.
+    Create new reports and view existing ones.
     </p>
 
     
@@ -321,7 +257,7 @@ class Projects extends Component{
             <h2 class="mt-4 font-bold text-xl text text-green-500">PROPOSALS</h2>
 
             <p class="text-xs text-gray-500 text-center mt-3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim molestiae nulla.
+            Create new project proposals.
             </p>
 
             
@@ -338,7 +274,7 @@ class Projects extends Component{
             
 
             <p class="text-xs text-gray-500 text-center mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim molestiae nulla.
+                Be more productive. Set and achieve new tasks for the day.
             </p>
 
         </div>
@@ -354,7 +290,7 @@ class Projects extends Component{
         
                 
             {/* Footer */}
-            <div class="border-t-2 border-gray mt-16 xl:ml-3">
+            <div class="border-t-2 border-gray mt-12">
                 <span class="text-gray-700 ml-3">MAHMUD ADELEYE © 2020</span>
                 <p class="text-gray-500 ml-3">Dissertation Project</p>
             </div>

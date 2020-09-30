@@ -38,89 +38,16 @@ class Home extends Component{
 
         </div>
 
-    {/* SideBar */}
+    
     <div class="flex flex-col md:flex-row">
 
-        <div class="bg-gray-100 shadow-lg h-16 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48">
-
-                {/* <div class="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
-                    <a href="#">
-                        <span class="text-xl pl-2">
-                        
-                        </span>
-                    </a>
-                </div> */}
-
-            <div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
-                
-                <div class="mt-6 mb-4 text-center">
-                    <img class="ml-12 h-14 w-24 rounded-full" src={"/images/user.png"} alt="" />
-                    <p className="italic">USER A</p>
-                </div>
-                
-                <hr />
-
-                <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
-                    <li class="mr-3 flex-1">
-                        <a class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                            <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/apps-grid.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black md:text-black block md:inline-block">Home</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/briefcase-line.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black  md:text-black  block md:inline-block">Projects</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/queue.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black  md:text-black  block md:inline-block">Volunteers</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline ">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/heart-care.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-lg text-black  md:text-black  block md:inline-block">Donors</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <hr />
-
-                
-                <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                            <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/edit-list.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black md:text-black block md:inline-block">Tasks</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/calendar.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black  md:text-black  block md:inline-block">Calendar</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/envelope-line.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black  md:text-black  block md:inline-block">Email</span>
-                        </a>
-                    </li>
-                   
-                </ul>
-
-                
-
-
-
-            </div>
-
-
-        </div>
-
         {/* Cards */}
-        <div class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+        <div class="main-content flex-1 bg-gray-100 md:mt-2 pb-24 md:pb-5">
             
             {/* 1st */}
 
-            <div class="container mx-auto px-10 py-8">
-                    <div class="mt-6">
+            <div class="container mx-auto px-10 py-4">
+                    <div class="mt-1">
                         <div class="flex flex-wrap -mx-6">
                             <div class="w-full px-2 sm:w-1/2 xl:w-1/4">
                                 <div class="flex items-center px-8 py-6 shadow-sm rounded-md bg-white">
@@ -130,7 +57,7 @@ class Home extends Component{
 
                                     <div class="mx-5">
                                         <div class="text-gray-500">Total Projects</div>
-                                        <h4 class="text-2xl font-semibold text-gray-700">10</h4>
+                                        <h4 class="text-2xl font-semibold text-gray-700"></h4>
                                         
                                     </div>
                                 </div>
@@ -186,17 +113,18 @@ class Home extends Component{
 
                 {/* WELCOME */}
 
-                <div class="flex xl:px-8 mb-6 ">
-                    <p class="w-2/4">WELCOME BACK, <span class="italic">User A</span></p>
-                    <p class="w-2/4 ">TODAY: {this.state.curTime}</p>
-                    {/* https://stackoverflow.com/questions/50890080/how-to-set-setinterval-in-reactjs
-                     */}
+                <div class="flex xl:px-8 mb-6 text-green-500 font-bold text-xl ">
+                    <p class="w-2/4 font-bold ">WELCOME
+                    {/* <span class="italic">User A</span> */}
+                    </p>
+                    <p class="w-2/4 font-bold  ">TODAY: {this.state.curTime}</p>
+                    
                 </div> 
 
                 {/* Add Button */}
-                <div class="text-right mt-2 mb-4 mr-6 ">
+                {/* <div class="text-right mt-2 mb-4 mr-6 ">
                 <input type="submit" value="Add New Project" class="bg-green-500 text-white font-bold text-lg rounded-sm hover:bg-gray-700 p-3 " /> 
-                </div>
+                </div> */}
             
                 {/* 2ND */}
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6 px-6">
@@ -233,6 +161,7 @@ class Home extends Component{
                 
             </div>
 
+
             <div class="flex flex-col items-center justify-center bg-white p-4 shadow rounded-lg">
                 <div class="inline-flex shadow-lg border border-gray-200 rounded-lg overflow-hidden h-20 w-20">
                     <img src={"./images/heart-care.png"}
@@ -260,15 +189,17 @@ class Home extends Component{
                 
 
                 <p class="text-xs text-gray-500 text-center mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim molestiae nulla.
+                    This section contains a productivity task list helping the admin set tasks to be done, current tasks and tasks completed.
                 </p>
 
             </div>
 
+            
+
         </div>
                 
             {/* Footer */}
-            <div class="border-t-2 border-gray mt-16 xl:ml-3">
+            <div class="border-t-2 border-gray mt-12">
                 <span class="text-gray-700 ml-3">MAHMUD ADELEYE © 2020</span>
                 <p class="text-gray-500 ml-3">Dissertation Project</p>
             </div>

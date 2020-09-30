@@ -23,16 +23,10 @@ class FormDonor extends Component {
     
         {/* SideBar */}
         <div class="flex flex-col md:flex-row">
-    
+{/*     
             <div class="bg-gray-100 shadow-lg h-16 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48">
     
-                    {/* <div class="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
-                        <a href="#">
-                            <span class="text-xl pl-2">
-                            
-                            </span>
-                        </a>
-                    </div> */}
+                    
     
                 <div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
                     
@@ -95,7 +89,7 @@ class FormDonor extends Component {
                 </div>
     
     
-            </div>
+            </div> */}
     
             {/* Main Content */}
             <div class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">

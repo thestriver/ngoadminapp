@@ -83,23 +83,23 @@ const TodoList = (props) => {
 
         
         <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
-            <li class="mr-3 flex-1">
-                <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                    <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/edit-list.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black md:text-black block md:inline-block">Tasks</span>
-                </a>
-            </li>
-            <li class="mr-3 flex-1">
-                <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/calendar.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black  md:text-black  block md:inline-block">Calendar</span>
-                </a>
-            </li>
-            <li class="mr-3 flex-1">
-                <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
-                <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/envelope-line.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black  md:text-black  block md:inline-block">Email</span>
-                </a>
-            </li>
-           
-        </ul>
+                    <li class="mr-3 flex-1">
+                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
+                            <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/edit-list.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black md:text-black block md:inline-block">Tasks</span>
+                        </a>
+                    </li>
+                    <li class="mr-3 flex-1">
+                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
+                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/calendar.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black  md:text-black  block md:inline-block">Reports</span>
+                        </a>
+                    </li>
+                    <li class="mr-3 flex-1">
+                        <a  class="block py-1 md:py-3 pl-1 align-middle text-white no-underline">
+                        <img class="h-4 w-8 pr-0 md:pr-3 inline-block" src={"./images/envelope-line.png"} alt=""/><span class="pb-1 md:pb-0 text-xs md:text-base text-black  md:text-black  block md:inline-block">Proposals</span>
+                        </a>
+                    </li>
+                   
+                </ul>
 
         
 
